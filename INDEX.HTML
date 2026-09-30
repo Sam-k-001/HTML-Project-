@@ -3,103 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Little Wonders – Toys & Gifts for Kids</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Little Wonders – Premium Toys, Gifts & Treats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- PHASE 5: Navigation bar -->
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <p>🚚 Free standard delivery on orders above ₹999 across India!</p>
+  </div>
+
+  <!-- Navigation Bar -->
   <nav>
-    <a href="#" class="logo">Little Wonders</a>
+    <a href="#" class="logo">Little Wonders 🎈</a>
     <ul>
       <li><a href="#toys">Toys</a></li>
       <li><a href="#gifts">Gifts</a></li>
+      <li><a href="#treats">Sweet Treats</a></li>
+      <li><a href="#kids-zone">Kids Zone</a></li>
     </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" aria-label="Cart">🛒 Cart (0)</button>
+    </div>
   </nav>
 
-  <!-- PHASE 1: Header + first toys -->
-  <header>
-    <h1>Little Wonders</h1>
-    <p>Toys and gifts for children of every age</p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">Pure Joy for Every Age</span>
+      <h1>Making Childhood Magical & Fun</h1>
+      <p>Explore safe, educational toys, memorable gift hampers, and delicious kid-friendly chocolates and treats.</p>
+      <div class="hero-btns">
+        <a href="#toys" class="btn btn-primary">Shop Toys</a>
+        <a href="#treats" class="btn btn-secondary">Explore Treats</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=700&q=80" alt="Smiling children playing happily with toys">
+    </div>
   </header>
 
   <main>
-    <h2>Toys</h2>
+    <!-- Section 1: Toys -->
+    <div class="section-title">
+      <h2>Curated Toys</h2>
+      <p>Safe, creative, and skill-building toys designed for endless laughter.</p>
+    </div>
 
-    <section id="toys">
-      <article>
-        <h3>Wooden Building Blocks</h3>
-        <p>50 colourful blocks for stacking and building. Ages 2+</p>
-        <p>Price: ₹599</p>
+    <section id="toys" class="product-grid">
+      <article class="card">
+        <div class="img-wrapper">
+          <span class="tag">Bestseller</span>
+          <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80" alt="Wooden Building Blocks">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(4.9)</span></div>
+          <h3>Wooden Building Blocks</h3>
+          <p>50 vibrant, non-toxic beechwood blocks for stacking and motor skills. Ages 2+</p>
+          <div class="card-bottom">
+            <span class="price">₹599</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
       </article>
 
-      <article>
-        <h3>Soft Teddy Bear</h3>
-        <p>A cuddly bear that's safe to hug and wash. Ages 0+</p>
-        <p>Price: ₹449</p>
+      <article class="card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=500&q=80" alt="Soft Teddy Bear">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★☆ <span>(4.7)</span></div>
+          <h3>Plush Huggable Teddy Bear</h3>
+          <p>Hypoallergenic, ultra-soft cuddle buddy that is machine washable. Ages 0+</p>
+          <div class="card-bottom">
+            <span class="price">₹449</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
       </article>
 
-      <article>
-        <h3>Toy Train Set</h3>
-        <p>Battery train with tracks and a small station. Ages 3+</p>
-        <p>Price: ₹1,299</p>
+      <article class="card">
+        <div class="img-wrapper">
+          <span class="tag">Top Rated</span>
+          <img src="https://images.unsplash.com/photo-1533228876829-65c94e7b5025?auto=format&fit=crop&w=500&q=80" alt="Electric Toy Train Set">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(5.0)</span></div>
+          <h3>Express Toy Train & Track Set</h3>
+          <p>Complete railway kit with real sound effects, light, and 12 snap-on tracks. Ages 3+</p>
+          <div class="card-bottom">
+            <span class="price">₹1,299</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=500&q=80" alt="Educational Shape Sorter Toy">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★☆ <span>(4.8)</span></div>
+          <h3>Montessori Shape Sorter Cube</h3>
+          <p>Early sensory and colour recognition learning box with 12 geometric shapes. Ages 1+</p>
+          <div class="card-bottom">
+            <span class="price">₹499</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
       </article>
     </section>
-        <!-- PHASE 2: Gifts section -->
-    <h2>Gifts</h2>
 
-    <section id="gifts">
-      <article>
-        <h3>Birthday Gift Box</h3>
-        <p>Colouring book, crayons, stickers and a small puzzle. Ages 4+</p>
-        <p>Price: ₹799</p>
+    <!-- Section 2: Gifts -->
+    <div class="section-title">
+      <h2>Gift Boxes & Learning Kits</h2>
+      <p>Ready-to-gift collections packed with creativity and fun.</p>
+    </div>
+
+    <section id="gifts" class="product-grid">
+      <article class="card">
+        <div class="img-wrapper">
+          <span class="tag">Gift Ready</span>
+          <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=500&q=80" alt="Birthday Gift Box">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(4.9)</span></div>
+          <h3>Celebration Birthday Box</h3>
+          <p>Includes an activity book, beeswax crayons, DIY puzzle, and celebration stickers.</p>
+          <div class="card-bottom">
+            <span class="price">₹799</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
       </article>
 
-      <article>
-        <h3>Story Book Set</h3>
-        <p>5 picture books with short bedtime stories. Ages 3+</p>
-        <p>Price: ₹649</p>
+      <article class="card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80" alt="Story Book Set">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★☆ <span>(4.6)</span></div>
+          <h3>Illustrated Bedtime Story Collection</h3>
+          <p>Set of 5 richly illustrated storybooks featuring inspiring moral lessons. Ages 3+</p>
+          <div class="card-bottom">
+            <span class="price">₹649</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
       </article>
 
-      <article>
-        <h3>Art and Craft Kit</h3>
-        <p>Paints, brushes and paper for creative play. Ages 5+</p>
-        <p>Price: ₹899</p>
+      <article class="card">
+        <div class="img-wrapper">
+          <span class="tag">Popular</span>
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=500&q=80" alt="Art & Craft Kit">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(4.8)</span></div>
+          <h3>Young Artist Painting & Craft Hamper</h3>
+          <p>Washable acrylic paints, sketching pads, palette, and brushes. Ages 5+</p>
+          <div class="card-bottom">
+            <span class="price">₹899</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
       </article>
+
+      <article class="card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&w=500&q=80" alt="DIY Science Kit">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★☆ <span>(4.7)</span></div>
+          <h3>Little Scientist Experiment Kit</h3>
+          <p>15 safe, hands-on STEM experiments exploring magnetism and color mixing. Ages 6+</p>
+          <div class="card-bottom">
+            <span class="price">₹999</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Section 3: Sweet Treats & Snacks -->
+    <div class="section-title">
+      <h2>Chocolates & Sweet Treats</h2>
+      <p>Kid-approved chocolates, mini cookies, and sweet party goodies.</p>
+    </div>
+
+    <section id="treats" class="product-grid">
+      <article class="card">
+        <div class="img-wrapper">
+          <span class="tag">Yummy</span>
+          <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=500&q=80" alt="Kids Milk Chocolate Box">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(4.9)</span></div>
+          <h3>Animal Safari Milk Chocolates</h3>
+          <p>12 bite-sized fun animal shape bars made with pure milk chocolate and zero preservatives.</p>
+          <div class="card-bottom">
+            <span class="price">₹349</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&w=500&q=80" alt="Rainbow Candies and Gummies">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★☆ <span>(4.6)</span></div>
+          <h3>Fruity Gummy Bears & Drops Jar</h3>
+          <p>Assorted real fruit juice gummies in a reusable glass container. Gelatin-free.</p>
+          <div class="card-bottom">
+            <span class="price">₹279</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=80" alt="Choco-Chip Mini Cookies">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(4.8)</span></div>
+          <h3>Crunchy Choco-Chip Butter Cookies</h3>
+          <p>Wholesome oats and butter cookies loaded with Belgian chocolate chips.</p>
+          <div class="card-bottom">
+            <span class="price">₹229</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="img-wrapper">
+          <span class="tag">Combo Pack</span>
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80" alt="Party Sweet Hamper">
+        </div>
+        <div class="card-info">
+          <div class="rating">★★★★★ <span>(5.0)</span></div>
+          <h3>Kids Wonder Snack & Choco Box</h3>
+          <p>Assortment of mini bars, marshmallows, and caramel pop crisps for party tables.</p>
+          <div class="card-bottom">
+            <span class="price">₹549</span>
+            <button class="btn-buy">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Section 4: Kids Zone Showcase -->
+    <section id="kids-zone" class="kids-banner">
+      <div class="kids-banner-text">
+        <h2>Little Moments, Pure Joy</h2>
+        <p>Our handpicked toys inspire imagination, problem-solving, and quality screen-free playtime.</p>
+      </div>
+      <div class="kids-gallery">
+        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=500&q=80" alt="Toddler playing with blocks outdoors">
+        <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=500&q=80" alt="Children sharing a laugh while playing">
+        <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=500&q=80" alt="Girl assembling a craft toy">
+      </div>
     </section>
   </main>
-  <!-- Floating Chatbot Widget -->
-<button id="chat-toggle-btn" aria-label="Open Chat">💬</button>
 
-<div id="chat-widget" class="chat-hidden">
-  <div class="chat-header">
-    <div class="chat-title">
-      <h4>ToyBot 🤖</h4>
-      <span>Little Wonders Helper</span>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h3>Little Wonders</h3>
+        <p>Bringing genuine smiles with high-standard toys and celebrations.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="#toys">Educational Toys</a></p>
+        <p><a href="#gifts">Gift Boxes</a></p>
+        <p><a href="#treats">Sweet Treats</a></p>
+      </div>
+      <div>
+        <h4>Need Support?</h4>
+        <p>Email: help@littlewonders.store</p>
+        <p>Delivery: All across India (UPI / Cards Accepted)</p>
+      </div>
     </div>
-    <button id="chat-close-btn">&times;</button>
+    <div class="copyright">
+      &copy; 2026 Little Wonders. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Widget -->
+  <button id="chat-toggle-btn" aria-label="Open Chat">💬</button>
+
+  <div id="chat-widget" class="chat-hidden">
+    <div class="chat-header">
+      <div class="chat-title">
+        <h4>ToyBot 🤖</h4>
+        <span>Little Wonders Assistant</span>
+      </div>
+      <button id="chat-close-btn">&times;</button>
+    </div>
+
+    <div id="chat-messages" class="chat-messages">
+      <div class="bot-msg">Hi there! 👋 What are you shopping for today? You can select an age or budget below!</div>
+    </div>
+
+    <div class="chat-quick-actions">
+      <button class="chip" data-query="Ages 0-2">Ages 0–2</button>
+      <button class="chip" data-query="Ages 3-5">Ages 3–5</button>
+      <button class="chip" data-query="Chocolates">Chocolates</button>
+      <button class="chip" data-query="Under ₹500">Under ₹500</button>
+    </div>
+
+    <form id="chat-input-form" class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a question or price..." autocomplete="off">
+      <button type="submit">➤</button>
+    </form>
   </div>
 
-  <div id="chat-messages" class="chat-messages">
-    <div class="bot-msg">Hi! Looking for toys or gifts? Tap an option below or type an age:</div>
-  </div>
-
-  <div class="chat-quick-actions">
-    <button class="chip" data-query="Ages 0-2">Ages 0–2</button>
-    <button class="chip" data-query="Ages 3-4">Ages 3–4</button>
-    <button class="chip" data-query="Ages 5+">Ages 5+</button>
-    <button class="chip" data-query="Under ₹700">Under ₹700</button>
-  </div>
-
-  <form id="chat-input-form" class="chat-input-area">
-    <input type="text" id="chat-input" placeholder="Ask about age, gifts, price..." autocomplete="off">
-    <button type="submit">➤</button>
-  </form>
-</div>
-
-<script src="script.js"></script>
-</body>
-
+  <script src="script.js"></script>
 </body>
 </html>

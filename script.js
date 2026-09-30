@@ -5,12 +5,29 @@ const chatForm = document.getElementById("chat-input-form");
 const chatInput = document.getElementById("chat-input");
 const chatMessages = document.getElementById("chat-messages");
 const chips = document.querySelectorAll(".chip");
+const cartBtn = document.querySelector(".cart-btn");
+const buyBtns = document.querySelectorAll(".btn-buy");
 
-// Toggle visibility
+// Shopping Cart Increment Demo
+let cartCount = 0;
+buyBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    cartCount++;
+    cartBtn.textContent = `🛒 Cart (${cartCount})`;
+    btn.textContent = "Added ✓";
+    btn.style.background = "#10b981";
+    setTimeout(() => {
+      btn.textContent = "Add to Cart";
+      btn.style.background = "";
+    }, 1200);
+  });
+});
+
+// Toggle Chat Widget
 toggleBtn.addEventListener("click", () => chatWidget.classList.toggle("chat-hidden"));
 closeBtn.addEventListener("click", () => chatWidget.classList.add("chat-hidden"));
 
-// Append message helper
+// Append Chat Message
 function addMessage(text, sender) {
   const msg = document.createElement("div");
   msg.className = sender === "user" ? "user-msg" : "bot-msg";
@@ -19,26 +36,29 @@ function addMessage(text, sender) {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Simple rule-based bot reply
+// Bot Reply Logic with Sweets & Age Recommendation
 function processReply(input) {
   const query = input.toLowerCase();
 
-  if (query.includes("0") || query.includes("1") || query.includes("2") || query.includes("toddler")) {
-    return "For toddlers (0-2 yrs), we recommend the Soft Teddy Bear (₹449) and Wooden Building Blocks (₹599)!";
+  if (query.includes("chocolate") || query.includes("sweet") || query.includes("snack") || query.includes("cookie") || query.includes("gummy")) {
+    return "Treats alert! 🍫 We have Animal Safari Milk Chocolates (₹349), Fruity Gummy Bears (₹279), and Choco-Chip Cookies (₹229)!";
   }
-  if (query.includes("3") || query.includes("4")) {
-    return "For ages 3-4, check out the Toy Train Set (₹1,299) or Story Book Set (₹649)!";
+  if (query.includes("0") || query.includes("1") || query.includes("2") || query.includes("toddler") || query.includes("baby")) {
+    return "For babies & toddlers (0-2 yrs), our top picks are the Plush Teddy Bear (₹449) and Montessori Shape Sorter (₹499)!";
   }
-  if (query.includes("5") || query.includes("6") || query.includes("art") || query.includes("craft")) {
-    return "For creative kids (5+), the Art and Craft Kit (₹899) and Birthday Gift Box (₹799) are great choices!";
+  if (query.includes("3") || query.includes("4") || query.includes("5")) {
+    return "For ages 3-5, try the Express Train Set (₹1,299) or the Bedtime Story Collection (₹649)!";
   }
-  if (query.includes("under") || query.includes("budget") || query.includes("cheap") || query.includes("700")) {
-    return "Budget-friendly picks under ₹700: Teddy Bear (₹449), Building Blocks (₹599), and Story Books (₹649)!";
+  if (query.includes("science") || query.includes("art") || query.includes("craft") || query.includes("6")) {
+    return "For creative & curious kids (6+), checkout our Science Experiment Kit (₹999) or Art & Painting Hamper (₹899)!";
   }
-  return "We have blocks, teddy bears, train sets, books, and art kits! Tell me the child's age or your budget.";
+  if (query.includes("under") || query.includes("budget") || query.includes("500")) {
+    return "Under ₹500 budget picks: Choco-Chip Cookies (₹229), Fruity Gummies (₹279), Teddy Bear (₹449), and Shape Sorter (₹499)!";
+  }
+  return "I can help you find toys by age, birthday gifts, or sweet treats & chocolates! What are you looking for?";
 }
 
-// Handle submit
+// Form Submission
 chatForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = chatInput.value.trim();
@@ -52,7 +72,7 @@ chatForm.addEventListener("submit", (e) => {
   }, 400);
 });
 
-// Handle chips
+// Quick Action Chips
 chips.forEach((chip) => {
   chip.addEventListener("click", () => {
     const query = chip.getAttribute("data-query");
