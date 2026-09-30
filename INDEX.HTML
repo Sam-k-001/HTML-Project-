@@ -69,6 +69,37 @@
       </article>
     </section>
   </main>
+  <!-- Floating Chatbot Widget -->
+<button id="chat-toggle-btn" aria-label="Open Chat">💬</button>
+
+<div id="chat-widget" class="chat-hidden">
+  <div class="chat-header">
+    <div class="chat-title">
+      <h4>ToyBot 🤖</h4>
+      <span>Little Wonders Helper</span>
+    </div>
+    <button id="chat-close-btn">&times;</button>
+  </div>
+
+  <div id="chat-messages" class="chat-messages">
+    <div class="bot-msg">Hi! Looking for toys or gifts? Tap an option below or type an age:</div>
+  </div>
+
+  <div class="chat-quick-actions">
+    <button class="chip" data-query="Ages 0-2">Ages 0–2</button>
+    <button class="chip" data-query="Ages 3-4">Ages 3–4</button>
+    <button class="chip" data-query="Ages 5+">Ages 5+</button>
+    <button class="chip" data-query="Under ₹700">Under ₹700</button>
+  </div>
+
+  <form id="chat-input-form" class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Ask about age, gifts, price..." autocomplete="off">
+    <button type="submit">➤</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
 
 </body>
 </html>
