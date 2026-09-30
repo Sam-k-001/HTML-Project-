@@ -97,3 +97,62 @@ article p:last-child {
   font-size: 1.2rem;
   font-weight: 700;
 }
+/* PHASE 5: Navigation bar */
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(31, 42, 68, 0.1);
+}
+
+nav .logo {
+  color: var(--navy);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav ul a:hover {
+  color: var(--navy);
+  border-color: var(--yellow);
+}
+
+/* Keeps section headings visible below the sticky menu */
+section#toys,
+section#gifts {
+  scroll-margin-top: 130px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 12px 20px;
+  }
+  nav ul {
+    gap: 16px;
+  }
+}
