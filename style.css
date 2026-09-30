@@ -1,0 +1,55 @@
+/* PHASE 3: Base styles + header */
+
+:root {
+  --navy: #1f2a44;
+  --yellow: #ffc93c;
+  --coral: #ff6b6b;
+  --bg: #f7f9fc;
+  --text: #3d4659;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 64px 20px;
+  border-bottom: 6px solid var(--yellow);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #d5dbe8;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+main h2 {
+  color: var(--navy);
+  font-size: 1.9rem;
+  margin: 32px 0 20px;
+}
