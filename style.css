@@ -53,3 +53,47 @@ main h2 {
   font-size: 1.9rem;
   margin: 32px 0 20px;
 }
+/* PHASE 4: Product cards */
+
+section#toys,
+section#gifts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+article {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
+  border-top: 5px solid var(--yellow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(31, 42, 68, 0.14);
+}
+
+article h3 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+article p {
+  font-size: 0.95rem;
+}
+
+/* The last paragraph in each card is the price */
+article p:last-child {
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--coral);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
